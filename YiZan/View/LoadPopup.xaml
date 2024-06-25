@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               CanBeDismissedByTappingOutsideOfPopup="False"
+               Color="Transparent"
+             x:Class="YiZan.View.LoadPopup">
+    <Grid Padding="10" Background="Transparent">
+        <Frame HasShadow="True" BorderColor="white">
+            <Image Source="load.png" x:Name="image1" HeightRequest="40" WidthRequest="40"/>
+        </Frame>
+    </Grid>
+</toolkit:Popup>

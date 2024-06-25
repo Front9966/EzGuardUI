@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             x:Class="YiZan.View.AccountControlPage">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+        <ImageButton Clicked="ImageButton_Clicked" Source="arrow.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start" Margin="20,20,0,0"/>
+        <Label Text="绑定快手账号" FontSize="23" Margin="30,30,0,0" FontFamily="HYSongYunLangHeiW" Grid.Row="1"/>
+        <Label Text="您需要绑定一个获赞账号和一个点赞账号，推荐大号获赞、小号点赞" FontSize="18" TextColor="#AAA" Margin="30,10" FontFamily="HYSongYunLangHeiW" Grid.Row="2"/>
+        <Label Text="获赞账号" FontSize="18" TextColor="black" Margin="30,10" FontFamily="Global" Grid.Row="3"/>
+        <Frame Padding="0" BackgroundColor="#EEE" CornerRadius="10" Margin="30,0" Grid.Row="4" BorderColor="Transparent" HeightRequest="130">
+            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Image x:Name="Image1" BackgroundColor="Transparent" Source="account_add.png" HeightRequest="50" WidthRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageButton_Clicked_1"/>
+                    </Image.GestureRecognizers>
+                    <Image.Clip>
+                        <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                    </Image.Clip>
+                </Image>
+                <Label x:Name="nicname1" Text="未绑定" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,7"/>
+                <Label x:Name="userinfo1" Text="0个关注 0个粉丝 0个作品" TextColor="#AAA" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,2"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Grid x:Name="Grid1" ColumnDefinitions="*,*" Grid.Row="5" Margin="30,10,30,0">
+            <Button Text="切换账号" Clicked="Button_Clicked" BackgroundColor="#27aeb5" Padding="0" HeightRequest="35" CornerRadius="20" FontFamily="HYSongYunLangHeiW" Margin="0,0,10,0"/>
+            <Button Text="解绑账号" Clicked="Button_Clicked_1" BackgroundColor="Red" Padding="0" HeightRequest="35" CornerRadius="20" Grid.Column="1" FontFamily="HYSongYunLangHeiW" Margin="10,0,0,0"/>
+        </Grid>
+        <Label Text="点赞账号" FontSize="18" TextColor="black" Margin="30,10" FontFamily="Global" Grid.Row="6"/>
+        <Frame Padding="0" BackgroundColor="#EEE" CornerRadius="10" Margin="30,0" Grid.Row="7" BorderColor="Transparent" HeightRequest="100">
+            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Image x:Name="Image2" BackgroundColor="Transparent" Source="account_add.png" HeightRequest="50" WidthRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageButton_Clicked_2"/>
+                    </Image.GestureRecognizers>
+                    <Image.Clip>
+                        <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                    </Image.Clip>
+                </Image>
+                <Label x:Name="nicname2" Text="未绑定" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,7"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Grid x:Name="Grid2" ColumnDefinitions="*,*" Grid.Row="8" Margin="30,10,30,0">
+            <Button Text="切换账号" Clicked="Button_Clicked_2" BackgroundColor="#27aeb5" Padding="0" HeightRequest="35" CornerRadius="20" FontFamily="HYSongYunLangHeiW" Margin="0,0,10,0"/>
+            <Button Text="解绑账号" Clicked="Button_Clicked_3" BackgroundColor="red" Padding="0" HeightRequest="35" CornerRadius="20" Grid.Column="1" FontFamily="HYSongYunLangHeiW" Margin="10,0,0,0"/>
+        </Grid>
+        <Label Text="绑定说明：" FontSize="15" TextColor="#AAA" Margin="20,10,20,0" FontFamily="HYSongYunLangHeiW" Grid.Row="9"/>
+        <Label Text="获赞账号：指获得点赞的账号,该账号不会参与互赞" FontSize="15" TextColor="#AAA" Margin="20,0" FontFamily="HYSongYunLangHeiW" Grid.Row="10"/>
+        <Label Text="点赞账号：指参与互赞的账号" FontSize="15" TextColor="#AAA" Margin="20,0" FontFamily="HYSongYunLangHeiW" Grid.Row="11"/>
+    </Grid>
+</ContentPage>

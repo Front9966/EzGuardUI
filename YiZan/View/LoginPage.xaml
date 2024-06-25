@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YiZan.View.LoginPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+        <Label Text="登录易赞" FontSize="23" FontFamily="Global" Margin="30,30"/>
+        <Entry x:Name="User" Placeholder="易赞账号" MaxLength="10" HeightRequest="70" Grid.Row="1" Keyboard="Numeric" PlaceholderColor="#AAA" Margin="20,0" FontSize="16"/>
+        <Entry x:Name="Pawwword" Placeholder="请输入密码" IsPassword="True" HeightRequest="70" MaxLength="16" Grid.Row="2" PlaceholderColor="#AAA" Margin="20,10" FontSize="16"/>
+        <Button x:Name="loginBtton" Clicked="Button_Clicked" Text="登录" Grid.Row="3" Margin="30,20,30,5" CornerRadius="20" BackgroundColor="#0094e9"/>
+        <HorizontalStackLayout Grid.Row="4" HorizontalOptions="Center" Margin="0,5">
+            <CheckBox VerticalOptions="Center" IsChecked="True" Color="#0094e9" CheckedChanged="CheckBox_CheckedChanged"/>
+            <Label Text="勾选后同意" FontSize="12" TextColor="black" VerticalOptions="Center"/>
+            <Label x:Name="user" Text="《用户协议》" FontSize="12" TextColor="#0094e9" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="和" FontSize="12" TextColor="black" VerticalOptions="Center"/>
+            <Label x:Name="Yyinsi" Text="《隐私协议》" FontSize="12" TextColor="#0094e9" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

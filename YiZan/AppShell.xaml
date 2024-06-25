@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="YiZan.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    TabBarForegroundColor="black"
+    TabBarTitleColor="black"
+    TabBarDisabledColor="#C6C7C8"
+    TabBarUnselectedColor="#C6C7C8"
+    xmlns:local="clr-namespace:YiZan.View">
+    <TabBar>
+        <Tab Title="首页"
+             IsVisible="True"
+             Icon="first.png">
+            <ShellContent ContentTemplate="{DataTemplate local:FirstPage}"/>
+        </Tab>
+        <Tab Title="中心"
+             Icon="classift.png">
+            <ShellContent ContentTemplate="{DataTemplate local:GoodPage}"/>
+        </Tab>
+        <Tab Title="我的"
+             Icon="user.png">
+            <ShellContent ContentTemplate="{DataTemplate local:UserPage}"/>
+        </Tab>
+    </TabBar>
+</Shell>

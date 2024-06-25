@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="YiZan.View.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarStyle="DarkContent" StatusBarColor="white"/>
+    </ContentPage.Behaviors>
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*">
+        <Label Text="Easy to like" FontFamily="Global" TextColor="black" FontSize="20" HorizontalOptions="Center" Margin="0,20,0,0"/>
+        <Image Source="yizan_icon.jpg" WidthRequest="180" Grid.Row="1" Margin="0,30,0,0">
+            <Image.Clip>
+                <EllipseGeometry Center="90,90" RadiusX="90" RadiusY="90"/>
+            </Image.Clip>
+        </Image>
+        <Button Clicked="Button_Clicked" Text="立即登录" FontSize="18" FontFamily="Global" Padding="0" Grid.Row="2" HeightRequest="50" CornerRadius="15" Margin="30,70,30,0" BackgroundColor="#536dff" TextColor="white"/>
+        <Button Clicked="Button_Clicked_1" Text="注册账号" FontSize="18" FontFamily="Global" Padding="0" Grid.Row="3" HeightRequest="50" CornerRadius="15" Margin="30,10,30,0" BackgroundColor="#e7e7e7" TextColor="black"/>
+        <Frame Grid.Row="4" Padding="0" Margin="30,10,30,0" CornerRadius="15" BackgroundColor="#e7e7e7" BorderColor="Transparent">
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="qq_icon.png" WidthRequest="20"/>
+                <Button Clicked="Button_Clicked_2" Text="QQ快捷登录" Margin="5,0,0,0" FontSize="16" FontFamily="Global" Padding="0" Grid.Row="4" HeightRequest="50" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="black"/>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame Grid.Row="5" Padding="0" Margin="30,10,30,0" CornerRadius="15" BackgroundColor="#e7e7e7" BorderColor="Transparent">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Image Source="wechat_icon.png" WidthRequest="20"/>
+                <Button Clicked="Button_Clicked_3" Text="微信快捷登录" Margin="5,0,0,0" FontSize="16" FontFamily="Global" Padding="0" Grid.Row="4" HeightRequest="50" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="black"/>
+            </HorizontalStackLayout>
+        </Frame>
+        <Label Text="CopyRight © 2022 - 2024 易赞 ALL Rights Reserved" FontSize="12" TextColor="#AAA" Grid.Row="6" VerticalOptions="End" HorizontalOptions="Center" Margin="0,0,0,10"/>
+    </Grid>
+</ContentPage>

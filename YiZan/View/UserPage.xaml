@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YiZan.View.UserPage">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto">
+        <Label Text="个人主页" FontFamily="Global" FontSize="24" Margin="20,20,0,10"/>
+        <HorizontalStackLayout Grid.Row="1" Margin="30,10">
+            <Frame BorderColor="#AAA" Padding="0" CornerRadius="30" IsClippedToBounds="True" VerticalOptions="Center" HorizontalOptions="Center">
+                <Image x:Name="Avatar" Source="yizan_icon.jpg" Aspect="AspectFill" WidthRequest="60" HeightRequest="60">
+                    <Image.Clip>
+                        <EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30"/>
+                    </Image.Clip>
+                </Image>
+            </Frame>
+            <Grid RowDefinitions="*,*" Margin="20,0,0,0">
+                <HorizontalStackLayout>
+                    <Label x:Name="Nicname" Text="默认用户" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" FontSize="22" VerticalTextAlignment="Center"/>
+                    <Image Source="novip.png" HeightRequest="40" Margin="15,0,0,0"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="1" VerticalOptions="Center">
+                    <Label Text="User ID：" FontAttributes="Bold" TextColor="#AAA" FontFamily="Global" FontSize="18" VerticalTextAlignment="Center"/>
+                    <Label x:Name="QQNumber" Text="1001" FontFamily="HYSongYunLangHeiW" FontSize="18" VerticalTextAlignment="Center"/>
+                </HorizontalStackLayout>
+            </Grid>
+        </HorizontalStackLayout>
+        <Frame Grid.Row="2" Padding="0" CornerRadius="10" BorderColor="Transparent" HeightRequest="100" Margin="20,10">
+            <Grid ColumnDefinitions="*,130">
+                <Image Source="back_vip.png" Aspect="Fill" Grid.ColumnSpan="2"/>
+                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Start" Margin="15,0">
+                    <Label Text="易赞VIP专属特权卡" FontFamily="Global" FontSize="20"/>
+                    <Label Text="未卡通VIP会员" FontFamily="Global" FontSize="15"/>
+                </VerticalStackLayout>
+                <Button Clicked="Button_Clicked" Text="立即开通" Padding="0" TextColor="black" Grid.Column="1" BackgroundColor="white" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" WidthRequest="90"/>
+            </Grid>
+        </Frame>
+        <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*,*,*" Grid.Row="3" Margin="10,0">
+            <VerticalStackLayout x:Name="fun" VerticalOptions="Center" Margin="0,10,0,0" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_phone.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="账号管理" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="fun1" Grid.Column="1" Margin="0,10,0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_log.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="互赞记录" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="fun2" Grid.Column="2" Margin="0,10,0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped2"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_setting_good.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="互赞设置" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="fun3" Grid.Column="3" Margin="0,10,0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped3"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_setting.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="APP设置" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="fun4" Grid.Row="1" Margin="0,10,0,0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped4"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_help.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="使用帮助" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="fun5" Grid.Row="1" Margin="0,10,0,0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped5"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_bulid.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="搭建同款" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="fun6" Grid.Row="1" Margin="0,10,0,0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped6"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_cs.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="联系客服" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="fun7" Grid.Row="1" Margin="0,10,0,0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped7"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Image Source="user_group.png" HeightRequest="30" WidthRequest="30"/>
+                <Label Text="会员群聊" FontFamily="HYSongYunLangHeiW" FontAttributes="Bold" Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="YiZan.View.CommitPopup"
+             Color="Transparent"
+             CanBeDismissedByTappingOutsideOfPopup="False">
+    <Grid Padding="10" RowDefinitions="Auto,Auto">
+        <Frame Padding="0" HasShadow="True" BorderColor="white">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto" Padding="10" WidthRequest="250">
+                <Label Text="提交信息" FontFamily="Global" FontSize="17" Margin="10,10"/>
+                <Entry x:Name="link" Placeholder="作品链接" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="15" TextColor="black"/>
+                <Entry x:Name="msg" Placeholder="评论内容" Grid.Row="2" HorizontalTextAlignment="Center" FontSize="15" TextColor="black"/>
+                <Button Text="提交" HeightRequest="40" Padding="0" FontSize="13" Clicked="Button_Clicked_1" Grid.Row="3" Margin="30,15" CornerRadius="10" BackgroundColor="#0094e9"/>
+            </Grid>
+        </Frame>
+        <Button Clicked="Button_Clicked" Grid.Row="1" BackgroundColor="Transparent" ImageSource="close.png" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" Margin="0,10,0,0"/>
+    </Grid>
+</toolkit:Popup>

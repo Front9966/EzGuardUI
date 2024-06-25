@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="YiZan.View.BookPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+    <Grid Margin="10,10">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <Label x:Name="text1" HorizontalOptions="Center" TextType="Html" FontFamily="HYSongYunLangHeiW"/>
+        </ScrollView>
+    </Grid>
+</ContentPage>

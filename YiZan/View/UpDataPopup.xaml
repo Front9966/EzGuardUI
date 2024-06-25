@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Color="Transparent"
+             x:Class="YiZan.View.UpDataPopup">
+    <Grid RowDefinitions="Auto,Auto" Padding="10">
+        <Frame Padding="0" HasShadow="True" CornerRadius="10" WidthRequest="200" BorderColor="white">
+            <VerticalStackLayout>
+                <Label x:Name="UpVersion" Text="有新版本更新" FontFamily="HYSongYunLangHeiW" FontSize="17" Margin="10,15,10,15"/>
+                <!-- Label x:Name="UpDataContent" Text="更新内aegagagaegaegaeaagagagagahah容" FontFamily="HYSongYunLangHeiW" TextColor="#AAA" FontSize="15" Margin="10,10"/ -->
+                <Line X1="0" X2="1000" Y1="0" Y2="0" Stroke="#EEE" StrokeThickness="2"/>
+                <Button Text="前往更新" Clicked="Button_Clicked" FontFamily="HYSongYunLangHeiW" TextColor="black" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Button x:Name="cccc" Clicked="Button_Clicked1" Grid.Row="1" BackgroundColor="Transparent" ImageSource="close.png" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" Margin="0,10,0,0"/>
+    </Grid>
+</toolkit:Popup>

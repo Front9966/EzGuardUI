@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YiZan.View.GoodPage">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+        <Label Text="互赞平台" FontFamily="Global" FontSize="24" Margin="20,20,0,10"/>
+        <Label Text="请选择对应平台绑定账号" FontFamily="HYSongYunLangHeiW" FontSize="15" TextColor="#AAA" Grid.Row="1" Margin="20,0"/>
+        <Grid Grid.Row="2" RowDefinitions="*,*" ColumnDefinitions="*,*" Margin="0,10">
+            <Frame x:Name="KuaiShou" BackgroundColor="#ff4a08" CornerRadius="10" HeightRequest="130" WidthRequest="150" HorizontalOptions="End" Margin="0,0,10,10" VerticalOptions="End" BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
+                <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                    <Image Source="quick_worker.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="快手" FontFamily="HYSongYunLangHeiW" FontSize="17" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="white"/>
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame x:Name="DouYin" Grid.Column="1" BackgroundColor="black" CornerRadius="10" HeightRequest="130" WidthRequest="150" HorizontalOptions="Start" Margin="10,0,0,10" VerticalOptions="End" BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1"/>
+                </Frame.GestureRecognizers>
+                <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                    <Image Source="tiktok.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="抖音" FontFamily="HYSongYunLangHeiW" FontSize="17" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="white"/>
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame x:Name="Bili" Grid.Row="1" BackgroundColor="#f16c8d" CornerRadius="10" HeightRequest="130" WidthRequest="150" HorizontalOptions="End" Margin="0,10,10,0" VerticalOptions="Start" BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped2"/>
+                </Frame.GestureRecognizers>
+                <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped2"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                    <Image Source="bili_bili.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="BiliBili" FontFamily="HYSongYunLangHeiW" FontSize="17" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="white"/>
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame x:Name="HongShu" Grid.Column="1" Grid.Row="1" BackgroundColor="#ff2442" CornerRadius="10" HeightRequest="130" WidthRequest="150" HorizontalOptions="Start" Margin="10,10,0,0" VerticalOptions="Start" BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped3"/>
+                </Frame.GestureRecognizers>
+                <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped3"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                    <Image Source="little_red_book.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="小红书" FontFamily="HYSongYunLangHeiW" FontSize="17" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="white"/>
+                </HorizontalStackLayout>
+            </Frame>
+        </Grid>
+        <Label Text="使用须知" FontFamily="HYSongYunLangHeiW" FontSize="18" FontAttributes="Bold" Grid.Row="3" Margin="20,20,0,0"/>
+        <Label Text="使用前请先绑定点赞账号与获赞账号哦！！！" FontAttributes="Bold" FontFamily="HYSongYunLangHeiW" FontSize="15" TextColor="#AAA" Grid.Row="4" Margin="40,10,0,0"/>
+    </Grid>
+</ContentPage>

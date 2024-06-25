@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             x:Class="YiZan.View.CsPage">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*">
+        <ImageButton Clicked="ImageButton_Clicked" Source="arrow.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" Margin="20,20,0,0"/>
+        <Label Text="联系客服" FontFamily="Global" FontSize="24" Grid.Row="1" Margin="30,20,0,0"/>
+        <Image Source="lian_xi.png" HeightRequest="150" WidthRequest="150" Grid.Row="2" HorizontalOptions="Center" Margin="0,75"/>
+        <Label Text="通过以下方式联系客服" FontFamily="HYSongYunLangHeiW" Margin="0,100,0,0" HorizontalOptions="Center" Grid.Row="3"/>
+        <Button Clicked="Button_Clicked" Text="联系QQ" Margin="30,10,30,0" CornerRadius="30" Grid.Row="4" BackgroundColor="#0094e9"/>
+        <Button Clicked="Button_Clicked_1" Text="联系微信" Margin="30,10,30,0" CornerRadius="30" Grid.Row="5" BackgroundColor="orange"/>
+        <Label Text="易赞 by-YiZan工作室" FontFamily="HYSongYunLangHeiW" TextColor="#AAA" VerticalOptions="End" Margin="0,0,0,10" HorizontalOptions="Center" Grid.Row="6"/>
+    </Grid>
+</ContentPage>

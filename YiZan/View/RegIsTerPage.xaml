@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YiZan.View.RegIsTerPage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+        <Label Text="注册易赞" FontSize="23" FontFamily="Global" Margin="30,60,30,30"/>
+        <Image x:Name="image1" Grid.Row="1" Source="yizan_icon.jpg" Aspect="Fill" HeightRequest="80" WidthRequest="80" Margin="0,30">
+            <Image.Clip>
+                <EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40"/>
+            </Image.Clip>
+        </Image>
+        <Entry x:Name="QQNumBer" TextChanged="QQNumBer_TextChanged" Placeholder="QQ号码" MaxLength="10" HeightRequest="70" Grid.Row="2" Keyboard="Numeric" PlaceholderColor="#AAA" Margin="20,0" FontSize="16"/>
+        <Entry x:Name="Password" Placeholder="请输入密码" MaxLength="16" IsPassword="True" HeightRequest="70" Grid.Row="3" PlaceholderColor="#AAA" Margin="20,0" FontSize="16"/>
+        <Button Clicked="Button_Clicked" Text="注册账号" Grid.Row="4" Margin="30,30" CornerRadius="20" BackgroundColor="#0094e9"/>
+    </Grid>
+</ContentPage>

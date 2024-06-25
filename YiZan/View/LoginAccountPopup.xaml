@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               Color="Transparent"
+               CanBeDismissedByTappingOutsideOfPopup="False"
+             x:Class="YiZan.View.LoginAccountPopup">
+    <Grid Padding="10" RowDefinitions="Auto,Auto">
+        <Frame Padding="0" HasShadow="True" BorderColor="white">
+            <Grid RowDefinitions="Auto,*,Auto" Padding="10" WidthRequest="250">
+                <Label Text="账号登录" FontFamily="Global" FontSize="24" Margin="10,10"/>
+                <Image x:Name="qrimage" Source="yizan_icon.png" Grid.Row="1" Margin="10" HeightRequest="140" WidthRequest="140" Aspect="Fill"/>
+                <Label x:Name="status" Grid.Row="2" Margin="0,30,0,10" Text="登录状态显示内容" FontFamily="HYSongYunLangHeiW" FontSize="15" HorizontalOptions="Center"/>
+            </Grid>
+        </Frame>
+        <Button Clicked="Button_Clicked" Grid.Row="1" BackgroundColor="Transparent" ImageSource="close.png" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" Margin="0,10,0,0"/>
+    </Grid>
+</toolkit:Popup>
